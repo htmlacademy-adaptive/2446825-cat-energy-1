@@ -6,7 +6,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="img/cat-logo.svg" width="33" height="38" alt="Логотип магазина.">
         <img src="img/cat-title.svg" width="101" height="18" alt="Магазин CAT ENERGY.">
       </a>
@@ -15,19 +15,19 @@
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item site-list__item--current">
-              <a class="site-list__link">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">
                 Подбор программы
               </a>
             </li>
@@ -46,21 +46,21 @@
               <legend class="visually-hidden">Данные о коте.</legend>
               <ul class="basic-data__list">
                 <li class="basic-data__item">
-                  <label class="basic-data__label">
+                  <label class="tag basic-data__tag">
                     ИМЯ:*
-                    <input class="sending-form__field" type="text" name="cat-name" value="БАРСИК" required>
+                    <input class="field basic-data__field" type="text" name="cat-name" value="БАРСИК" required>
                   </label>
                 </li>
                 <li class="basic-data__item">
-                  <label class="basic-data__label">
+                  <label class="tag basic-data__tag">
                     Вес (кг):*
-                    <input class="basic-data__field" type="number" name="cat-weight" value="7" required>
+                    <input class="field basic-data__field" type="number" name="cat-weight" value="7" required>
                   </label>
                 </li>
                 <li class="basic-data__item">
-                  <label class="basic-data__label">
+                  <label class="tag basic-data__tag">
                     Возраст (лет):
-                    <input class="basic-data__field" type="number" name="cat-age" value="7">
+                    <input class="field basic-data__field" type="number" name="cat-age" value="7">
                   </label>
                 </li>
               </ul>
@@ -69,19 +69,19 @@
               <legend class="visually-hidden">Выберете программу.</legend>
               <ul class="programm-choice__list">
                 <li class="programm-choice__item">
-                  <label class="programm-choice__label">
+                  <label class="tag programm-choice__tag">
                     Похудение
                     <input class="programm-choice__radio" type="radio" name="your-choice" value="weight-loss" checked>
                   </label>
                 </li>
                 <li class="programm-choice__item">
-                  <label class="programm-choice__label">
+                  <label class="tag programm-choice__tag">
                     Набор массы
                     <input class="programm-choice__radio" type="radio" name="your-choice" value="weight-gain">
                   </label>
                 </li>
                 <li class="programm-choice__item">
-                  <label class="programm-choice__label">
+                  <label class="tag programm-choice__tag">
                     Не знаю (Нужен ваш совет)
                     <input class="programm-choice__radio" type="radio" name="your-choice" value="need-advice">
                   </label>
@@ -92,15 +92,15 @@
               <legend class="owner-data__legend">Контактные данные (владельца кота)</legend>
               <ul class="owner-data__list">
                 <li class="owner-data__item">
-                  <label class="owner-data__label">
+                  <label class="tag owner-data__tag">
                     E-mail:*
-                    <input class="owner-data__field" type="email" name="owner-email" value="kuklachev@gmail.com" required>
+                    <input class="field owner-data__field" type="email" name="owner-email" value="kuklachev@gmail.com" required>
                   </label>
                 </li>
                 <li class="owner-data__item">
-                  <label class="owner-data__label">
+                  <label class="tag owner-data__tag">
                     Телефон:*
-                    <input class="owner-data__field" type="tel" name="owner-tel" value="8 (960) 900-60-90" required>
+                    <input class="field owner-data__field" type="tel" name="owner-tel" value="8 (960) 900-60-90" required>
                   </label>
                 </li>
               </ul>
@@ -116,37 +116,37 @@
               <legend class="extra-data__legend">Дополнительно</legend>
                 <ul class="extra-data__list">
                   <li class="extra-data__item">
-                    <label class="extra-data__label">
+                    <label class="tag extra-data__tag">
                       Сахарозаменитель
                       <input class="extra-data__checkbox" type="checkbox" name="sweetener" checked>
                     </label>
                   </li>
                   <li class="extra-data__item">
-                    <label class="extra-data__label">
+                    <label class="tag extra-data__tag">
                       Питьевая вода
                       <input class="extra-data__checkbox" type="checkbox" name="water">
                     </label>
                   </li>
                   <li class="extra-data__item">
-                    <label class="extra-data__label">
+                    <label class="tag extra-data__tag">
                       Молоко
                       <input class="extra-data__checkbox" type="checkbox" name="milk">
                     </label>
                   </li>
                   <li class="extra-data__item">
-                    <label class="extra-data__label">
+                    <label class="tag extra-data__tag">
                       Витамины
                       <input class="extra-data__checkbox" type="checkbox" name="vitamins">
                     </label>
                   </li>
                 </ul>
             </fieldset>
-            <button class="selection-form__button" type="submit">Отправить заявку</button>
+            <button class="button selection-form__button" type="submit">Отправить заявку</button>
             <span class="sending-form__info">* — Обязательные поля</span>
           </form>
         </div>
       </section>
-      <section class="contacts contacts--form">
+      <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты.</h2>
           <b class="contacts__intro">Приглашаем к сотрудничеству дилеров!</b>
