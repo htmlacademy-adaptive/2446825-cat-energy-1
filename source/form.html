@@ -153,6 +153,27 @@
           <p class="contacts__adress">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
+          <div id="map" style="width: 320px; height: 362px;">
+          </div>
+          <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+          <script type="text/javascript">
+            ymaps.ready(init);
+            function init() {
+              var myMap = new ymaps.Map("map", {
+                center: [59.938631, 30.323037],
+                zoom: 14
+              }, {
+                searchControlProvider: 'yandex#search'
+              });
+              var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], null, {
+                iconLayout: 'default#image',
+                iconImageHref: "img/map-pin.svg",
+                iconImageSize: [57, 53],
+                iconImageOffset: [-29, -53]
+              });
+              myMap.geoObjects.add(myPlacemark);
+            }
+          </script>
           <img class="contacts__map" src="img/map-mobile.jpg" width="320" height="362" alt="Адресс на карте города.">
         </div>
       </section>
