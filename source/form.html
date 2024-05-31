@@ -39,105 +39,126 @@
       <h1 class="visually-hidden">Форма подбора программы.</h1>
       <section class="selection-form">
         <div class="selection-form__wrapper">
-          <h2 class="selection-form__title">Подбор программы</h2>
+          <h2 class="inner__title">Подбор программы</h2>
           <p class="selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <form class="selection-form__form sending-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="sending-form__data basic-data">
+          <form class="sending-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="sending-form__fieldset">
               <legend class="visually-hidden">Данные о коте.</legend>
-              <ul class="basic-data__list">
-                <li class="basic-data__item">
-                  <label class="tag basic-data__tag">
+              <ul class="sending-form__list">
+                <li class="sending-form__item">
+                  <label class="sending-form__label sending-form__label--text">
                     ИМЯ:*
-                    <input class="field basic-data__field" type="text" name="cat-name" value="БАРСИК" required>
+                    <input class="sending-form__control sending-form__control--text" type="text" name="cat-name" value="БАРСИК" required>
                   </label>
                 </li>
-                <li class="basic-data__item">
-                  <label class="tag basic-data__tag">
+                <li class="sending-form__item">
+                  <label class="sending-form__label sending-form__label--text">
                     Вес (кг):*
-                    <input class="field basic-data__field" type="number" name="cat-weight" value="7" required>
+                    <input class="sending-form__control sending-form__control--text" type="number" name="cat-weight" value="7" required>
                   </label>
                 </li>
-                <li class="basic-data__item">
-                  <label class="tag basic-data__tag">
+                <li class="sending-form__item">
+                  <label class="sending-form__label sending-form__label--text">
                     Возраст (лет):
-                    <input class="field basic-data__field" type="number" name="cat-age" value="7">
+                    <input class="sending-form__control sending-form__control--text" type="number" name="cat-age" value="7">
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="sending-form__data programm-choice">
+            <fieldset class="sending-form__fieldset">
               <legend class="visually-hidden">Выберете программу.</legend>
-              <ul class="programm-choice__list">
-                <li class="programm-choice__item">
-                  <label class="tag programm-choice__tag">
-                    Похудение
-                    <input class="programm-choice__radio" type="radio" name="your-choice" value="weight-loss" checked>
-                  </label>
+              <ul class="sending-form__list">
+                <li class="sending-form__item">
+                  <div class="sending-form__radio">
+                    <label class="sending-form__label">
+                      <input class="visually-hidden" type="radio" name="your-choice" value="weight-loss" checked>
+                      <span class="sending-form__radio-mark"></span>
+                      <span class="sending-form__radio-name">Похудение</span>
+                    </label>
+                  </div>
                 </li>
-                <li class="programm-choice__item">
-                  <label class="tag programm-choice__tag">
-                    Набор массы
-                    <input class="programm-choice__radio" type="radio" name="your-choice" value="weight-gain">
-                  </label>
+                <li class="sending-form__item">
+                  <div class="sending-form__radio">
+                    <label class="sending-form__label">
+                      <input class="visually-hidden" type="radio" name="your-choice" value="weight-gain">
+                      <span class="sending-form__radio-mark"></span>
+                      <span class="sending-form__radio-name">Набор массы</span>
+                    </label>
+                  </div>
                 </li>
-                <li class="programm-choice__item">
-                  <label class="tag programm-choice__tag">
-                    Не знаю (Нужен ваш совет)
-                    <input class="programm-choice__radio" type="radio" name="your-choice" value="need-advice">
-                  </label>
+                <li class="sending-form__item">
+                  <div class="sending-form__radio">
+                    <label class="sending-form__label">
+                      <input class="visually-hidden" type="radio" name="your-choice" value="need-advice">
+                      <span class="sending-form__radio-mark"></span>
+                      <span class="sending-form__radio-name">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </div>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="sending-form__data owner-data">
-              <legend class="owner-data__legend">Контактные данные (владельца кота)</legend>
-              <ul class="owner-data__list">
-                <li class="owner-data__item">
-                  <label class="tag owner-data__tag">
+            <fieldset class="sending-form__fieldset">
+              <legend class="sending-form__legend">Контактные данные (владельца кота)</legend>
+              <ul class="sending-form__list">
+                <li class="sending-form__item">
+                  <label class="sending-form__label sending-form__label--text">
                     E-mail:*
-                    <input class="field owner-data__field" type="email" name="owner-email" value="kuklachev@gmail.com" required>
+                    <input class="sending-form__control sending-form__control--text" type="email" name="owner-email" value="kuklachev@gmail.com" required>
                   </label>
                 </li>
-                <li class="owner-data__item">
-                  <label class="tag owner-data__tag">
+                <li class="sending-form__item">
+                  <label class="sending-form__label sending-form__label--text">
                     Телефон:*
-                    <input class="field owner-data__field" type="tel" name="owner-tel" value="8 (960) 900-60-90" required>
+                    <input class="sending-form__control sending-form__control--text" type="tel" name="owner-tel" value="8 (960) 900-60-90" required>
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="sending-form__data comment">
-              <legend class="comment__legend">Комментарий</legend>
+            <fieldset class="sending-form__fieldset">
+              <legend class="sending-form__legend">Комментарий</legend>
               <label class="visually-hidden">
                 Расскажите обо всех повадках кота.
-                <textarea class="comment__field">Расскажите обо всех повадках кота</textarea>
+                <textarea class="sending-form__control sending-form__control--textarea" name="sending-form-comment">Расскажите обо всех повадках кота</textarea>
               </label>
             </fieldset>
-            <fieldset class="sending-form__data extra-data">
-              <legend class="extra-data__legend">Дополнительно</legend>
-                <ul class="extra-data__list">
-                  <li class="extra-data__item">
-                    <label class="tag extra-data__tag">
-                      Сахарозаменитель
-                      <input class="extra-data__checkbox" type="checkbox" name="sweetener" checked>
-                    </label>
+            <fieldset class="sending-form__fieldset">
+              <legend class="sending-form__legend">Дополнительно</legend>
+                <ul class="sending-form__list">
+                  <li class="sending-form__item">
+                    <div class="sending-form__checkbox">
+                      <label class="sending-form__label">
+                        <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                        <span class="sending-form__checkbox-mark"></span>
+                        <span class="sending-form__checkbox-name">Сахарозаменитель</span>
+                      </label>
+                    </div>
                   </li>
-                  <li class="extra-data__item">
-                    <label class="tag extra-data__tag">
-                      Питьевая вода
-                      <input class="extra-data__checkbox" type="checkbox" name="water">
-                    </label>
+                  <li class="sending-form__item">
+                    <div class="sending-form__checkbox">
+                      <label class="sending-form__label">
+                        <input class="visually-hidden" type="checkbox" name="water">
+                        <span class="sending-form__checkbox-mark"></span>
+                        <span class="sending-form__checkbox-name">Питьевая вода</span>
+                      </label>
+                    </div>
                   </li>
-                  <li class="extra-data__item">
-                    <label class="tag extra-data__tag">
-                      Молоко
-                      <input class="extra-data__checkbox" type="checkbox" name="milk">
-                    </label>
+                  <li class="sending-form__item">
+                    <div class="sending-form__checkbox">
+                      <label class="sending-form__label">
+                        <input class="visually-hidden" type="checkbox" name="milk">
+                        <span class="sending-form__checkbox-mark"></span>
+                        <span class="sending-form__checkbox-name">Молоко</span>
+                      </label>
+                    </div>
                   </li>
-                  <li class="extra-data__item">
-                    <label class="tag extra-data__tag">
-                      Витамины
-                      <input class="extra-data__checkbox" type="checkbox" name="vitamins">
-                    </label>
+                  <li class="sending-form__item">
+                    <div class="sending-form__checkbox">
+                      <label class="sending-form__label">
+                        <input class="visually-hidden" type="checkbox" name="vitamins">
+                        <span class="sending-form__checkbox-mark"></span>
+                        <span class="sending-form__checkbox-name">Витамины</span>
+                      </label>
+                    </div>
                   </li>
                 </ul>
             </fieldset>
@@ -153,27 +174,7 @@
           <p class="contacts__adress">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
-          <div id="map" style="width: 320px; height: 362px;">
-          </div>
-          <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-          <script type="text/javascript">
-            ymaps.ready(init);
-            function init() {
-              var myMap = new ymaps.Map("map", {
-                center: [59.938631, 30.323037],
-                zoom: 14
-              }, {
-                searchControlProvider: 'yandex#search'
-              });
-              var myPlacemark = new ymaps.Placemark([59.938631, 30.323037], null, {
-                iconLayout: 'default#image',
-                iconImageHref: "img/map-pin.svg",
-                iconImageSize: [57, 53],
-                iconImageOffset: [-29, -53]
-              });
-              myMap.geoObjects.add(myPlacemark);
-            }
-          </script>
+          <div id="map" style="width: 320px; height: 362px;"></div>
           <img class="contacts__map" src="img/map-mobile.jpg" width="320" height="362" alt="Адресс на карте города.">
         </div>
       </section>
@@ -181,11 +182,13 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__logo logo">
-          <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.624 21.957A9.428 9.428 0 0 1 .02 16.238V7.762A9.559 9.559 0 0 1 1.523 1.94C2.625.613 4.327 0 6.831 0c2.503 0 4.106.613 5.107 1.736A7.433 7.433 0 0 1 13.44 6.74v2.043H8.533V6.434a5.116 5.116 0 0 0-.3-2.043 1.46 1.46 0 0 0-.579-.627 1.42 1.42 0 0 0-.823-.19c-.701 0-1.202.205-1.402.715a6.72 6.72 0 0 0-.3 2.247v10.928a4.3 4.3 0 0 0 .4 2.145c.2.51.701.714 1.402.714s1.102-.204 1.302-.715c.227-.69.33-1.417.3-2.144v-2.451h4.907v2.042a7.922 7.922 0 0 1-1.502 5.107C10.937 23.387 9.234 24 6.831 24c-2.403-.102-4.206-.715-5.207-2.043ZM19.348.306h5.708l4.206 23.285h-4.606l-.801-4.902H20.55l-.801 4.902h-4.707L19.348.306Zm4.106 15.32-1.202-9.09-1.201 9.09h2.403ZM32.767 4.187h-3.405V.307H41.28v3.778h-3.405v19.506h-5.107V4.188ZM50.392.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349H50.29V.306h.1ZM61.808.306h2.203l6.509 15.422V.306h2.603v23.285h-2.002L64.51 7.66V23.59h-2.703V.306ZM76.128.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349h-8.812V.306ZM87.543.306h4.607a7.896 7.896 0 0 1 5.107 1.43c1.102.92 1.602 2.553 1.602 4.698 0 2.962-.901 4.8-2.804 5.413l3.205 11.642h-3.105l-3.004-10.927h-2.503v10.927h-3.205V.306h.1Zm4.407 10.009a4.313 4.313 0 0 0 2.904-.817c.6-.51.901-1.532.901-3.064a6.722 6.722 0 0 0-.3-2.247 2.576 2.576 0 0 0-1.102-1.225 4.488 4.488 0 0 0-2.203-.409h-1.402v7.66h1.202v.102ZM102.865 21.855a10.485 10.485 0 0 1-1.402-5.923V8.17c-.025-1.48.144-2.957.501-4.391a5.186 5.186 0 0 1 1.902-2.656 6.438 6.438 0 0 1 3.705-.919c2.103 0 3.606.51 4.507 1.634a7.93 7.93 0 0 1 1.402 5.107v.817h-3.004v-.715c.004-.855-.063-1.71-.201-2.553a2.045 2.045 0 0 0-.801-1.328 3.05 3.05 0 0 0-1.903-.51 2.961 2.961 0 0 0-2.002.612 2.331 2.331 0 0 0-.801 1.634 19.568 19.568 0 0 0-.201 2.758v8.68a9.433 9.433 0 0 0 .601 3.881c.401.817 1.202 1.124 2.403 1.124.475.06.956-.024 1.384-.242.428-.218.782-.56 1.02-.984a9.572 9.572 0 0 0 .701-4.085V14.4h-2.904v-2.349h5.808v11.54h-2.003l-.3-2.655a4.172 4.172 0 0 1-1.553 2.202 4.03 4.03 0 0 1-2.553.76 4.924 4.924 0 0 1-2.406-.468 5.032 5.032 0 0 1-1.9-1.575ZM119.989 15.421 115.082.408h3.004l3.505 11.235L124.996.408H128l-4.907 15.013v8.17h-3.004v-8.17h-.1Z"
-              fill="#111" />
-          </svg>
+          <a class="logo__link" href="index.html">
+            <svg width="128" height="24" viewBox="0 0 128 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.624 21.957A9.428 9.428 0 0 1 .02 16.238V7.762A9.559 9.559 0 0 1 1.523 1.94C2.625.613 4.327 0 6.831 0c2.503 0 4.106.613 5.107 1.736A7.433 7.433 0 0 1 13.44 6.74v2.043H8.533V6.434a5.116 5.116 0 0 0-.3-2.043 1.46 1.46 0 0 0-.579-.627 1.42 1.42 0 0 0-.823-.19c-.701 0-1.202.205-1.402.715a6.72 6.72 0 0 0-.3 2.247v10.928a4.3 4.3 0 0 0 .4 2.145c.2.51.701.714 1.402.714s1.102-.204 1.302-.715c.227-.69.33-1.417.3-2.144v-2.451h4.907v2.042a7.922 7.922 0 0 1-1.502 5.107C10.937 23.387 9.234 24 6.831 24c-2.403-.102-4.206-.715-5.207-2.043ZM19.348.306h5.708l4.206 23.285h-4.606l-.801-4.902H20.55l-.801 4.902h-4.707L19.348.306Zm4.106 15.32-1.202-9.09-1.201 9.09h2.403ZM32.767 4.187h-3.405V.307H41.28v3.778h-3.405v19.506h-5.107V4.188ZM50.392.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349H50.29V.306h.1ZM61.808.306h2.203l6.509 15.422V.306h2.603v23.285h-2.002L64.51 7.66V23.59h-2.703V.306ZM76.128.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349h-8.812V.306ZM87.543.306h4.607a7.896 7.896 0 0 1 5.107 1.43c1.102.92 1.602 2.553 1.602 4.698 0 2.962-.901 4.8-2.804 5.413l3.205 11.642h-3.105l-3.004-10.927h-2.503v10.927h-3.205V.306h.1Zm4.407 10.009a4.313 4.313 0 0 0 2.904-.817c.6-.51.901-1.532.901-3.064a6.722 6.722 0 0 0-.3-2.247 2.576 2.576 0 0 0-1.102-1.225 4.488 4.488 0 0 0-2.203-.409h-1.402v7.66h1.202v.102ZM102.865 21.855a10.485 10.485 0 0 1-1.402-5.923V8.17c-.025-1.48.144-2.957.501-4.391a5.186 5.186 0 0 1 1.902-2.656 6.438 6.438 0 0 1 3.705-.919c2.103 0 3.606.51 4.507 1.634a7.93 7.93 0 0 1 1.402 5.107v.817h-3.004v-.715c.004-.855-.063-1.71-.201-2.553a2.045 2.045 0 0 0-.801-1.328 3.05 3.05 0 0 0-1.903-.51 2.961 2.961 0 0 0-2.002.612 2.331 2.331 0 0 0-.801 1.634 19.568 19.568 0 0 0-.201 2.758v8.68a9.433 9.433 0 0 0 .601 3.881c.401.817 1.202 1.124 2.403 1.124.475.06.956-.024 1.384-.242.428-.218.782-.56 1.02-.984a9.572 9.572 0 0 0 .701-4.085V14.4h-2.904v-2.349h5.808v11.54h-2.003l-.3-2.655a4.172 4.172 0 0 1-1.553 2.202 4.03 4.03 0 0 1-2.553.76 4.924 4.924 0 0 1-2.406-.468 5.032 5.032 0 0 1-1.9-1.575ZM119.989 15.421 115.082.408h3.004l3.505 11.235L124.996.408H128l-4.907 15.013v8.17h-3.004v-8.17h-.1Z"
+                fill="#111" />
+            </svg>
+          </a>
         </div>
         <div class="main-footer__social social">
           <ul class="social__list">
@@ -240,5 +243,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
