@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">
-        <img src="img/cat-logo.svg" width="33" height="38" alt="Логотип магазина.">
-        <img src="img/cat-title.svg" width="101" height="18" alt="Магазин CAT ENERGY.">
+      <a class="main-header__logo logo">
+        <img class="logo__image" src="img/cat-logo.svg" width="33" height="38" alt="Логотип магазина.">
+        <img class="logo__text" src="img/cat-title.svg" width="101" height="18" alt="Магазин CAT ENERGY.">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--is-close">
             <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__link">
                 Главная
@@ -203,6 +204,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/main-nav.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/map.js"></script>
   </body>
