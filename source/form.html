@@ -40,7 +40,7 @@
       <h1 class="visually-hidden">Форма подбора программы.</h1>
       <section class="selection-form">
         <div class="selection-form__wrapper">
-          <h2 class="page__title">Подбор программы</h2>
+          <h2 class="page-title page-title--form">Подбор программы</h2>
           <p class="selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="sending-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="sending-form__fieldset">
@@ -48,28 +48,22 @@
               <ul class="sending-form__list">
                 <li class="sending-form__item">
                   <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text">
-                      ИМЯ:*
-                      <input class="sending-form__control sending-form__control--text" type="text" name="cat-name" value="БАРСИК"
+                    <label class="sending-form__label sending-form__label--text" for="cat-name">ИМЯ:*</label>
+                      <input class="sending-form__control sending-form__control--text" id="cat-name" type="text" name="cat-name" value="БАРСИК"
                         required>
-                    </label>
                   </div>
                 </li>
                 <li class="sending-form__item">
                   <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text">
-                      Вес (кг):*
-                      <input class="sending-form__control sending-form__control--text" type="number" name="cat-weight" value="7"
+                    <label class="sending-form__label sending-form__label--text" for="cat-weight">Вес (кг):*</label>
+                      <input class="sending-form__control sending-form__control--text" id="cat-weight" type="number" name="cat-weight" value="7"
                         required>
-                    </label>
                   </div>
                 </li>
                 <li class="sending-form__item">
                   <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text">
-                      Возраст (лет):
-                      <input class="sending-form__control sending-form__control--text" type="number" name="cat-age" value="7">
-                    </label>
+                    <label class="sending-form__label sending-form__label--text" for="cat-age">Возраст (лет):</label>
+                      <input class="sending-form__control sending-form__control--text" id="cat-age" type="number" name="cat-age" value="7">
                   </div>
                 </li>
               </ul>
@@ -106,37 +100,31 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="sending-form__fieldset">
+            <fieldset class="sending-form__fieldset sending-form__fieldset--s">
               <legend class="sending-form__legend">Контактные данные (владельца кота)</legend>
               <ul class="sending-form__list">
                 <li class="sending-form__item">
                   <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text">
-                      E-mail:*
-                      <input class="sending-form__control sending-form__control--text" type="email" name="owner-email"
+                    <label class="sending-form__label sending-form__label--text" for="owner-email">E-mail:*</label>
+                      <input class="sending-form__control sending-form__control--text" id="owner-email" type="email" name="owner-email"
                         value="kuklachev@gmail.com" required>
-                    </label>
                   </div>
                 </li>
                 <li class="sending-form__item">
                   <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text">
-                      Телефон:*
-                      <input class="sending-form__control sending-form__control--text" type="tel" name="owner-tel"
+                    <label class="sending-form__label sending-form__label--text" for="owner-tel">Телефон:*</label>
+                      <input class="sending-form__control sending-form__control--text" id="owner-tel" type="tel" name="owner-tel"
                         value="8 (960) 900-60-90" required>
-                    </label>
                   </div>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="sending-form__fieldset">
+            <fieldset class="sending-form__fieldset sending-form__fieldset--s">
               <legend class="sending-form__legend">Комментарий</legend>
-              <label class="visually-hidden">
-                Расскажите обо всех повадках кота.
-                <textarea class="sending-form__control sending-form__control--textarea" name="sending-form-comment">Расскажите обо всех повадках кота</textarea>
-              </label>
+              <label class="visually-hidden" for="comment">Расскажите обо всех повадках кота.</label>
+                <textarea class="sending-form__control sending-form__control--textarea" id="comment" name="sending-form-comment">Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset class="sending-form__fieldset">
+            <fieldset class="sending-form__fieldset sending-form__fieldset--s">
               <legend class="sending-form__legend">Дополнительно</legend>
                 <ul class="sending-form__list">
                   <li class="sending-form__item">
@@ -177,7 +165,7 @@
                   </li>
                 </ul>
             </fieldset>
-            <button class="button selection-form__button" type="submit">Отправить заявку</button>
+            <button class="button sending-form__button" type="submit">Отправить заявку</button>
             <span class="sending-form__info">* — Обязательные поля</span>
           </form>
         </div>
