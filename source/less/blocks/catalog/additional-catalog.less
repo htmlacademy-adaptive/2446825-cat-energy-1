@@ -1,0 +1,90 @@
+.additional-catalog {
+  background-color: #ffffff;
+}
+
+.additional-catalog__wrapper {
+  padding: 25px 20px 35px;
+}
+
+.additional-catalog__title {
+  padding: 0;
+  margin: 0 0 36px 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.additional-catalog__list {
+  padding: 0;
+  margin: 0 0 35px 0;
+  list-style: none;
+}
+
+.additional-catalog__item {
+  position: relative;
+  padding: 13px 0 19px;
+}
+
+.additional-catalog__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #cdcdcd;
+  content: "";
+}
+
+.additional-catalog__item::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #cdcdcd;
+  content: "";
+}
+
+.additional-catalog__gift {
+  position: relative;
+}
+
+.additional-catalog__gift::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
+  content: "";
+}
+
+.additional-catalog__gift::after {
+  position: absolute;
+  top: 58px;
+  left: 101px;
+  width: 78px;
+  height: 80px;
+  background-image: url("../../../img/icon/gift-icon.svg");
+  content: "";
+}
+
+.additional-catalog__gift-image {
+  display: block;
+}
+
+.additional-catalog__gift-text {
+  position: absolute;
+  top: 187px;
+  left: 58px;
+  width: 161px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
