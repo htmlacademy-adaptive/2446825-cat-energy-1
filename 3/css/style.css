@@ -1,25 +1,16 @@
 @font-face {
   font-family: "Oswald";
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../fonts/oswald/oswaldregular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../fonts/lato/Lato-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
-.page {
-  width: 320px;
-  margin: 0 auto;
-  outline: 1px solid #ff6347;
-}
-.page__body {
-  margin: 0;
-  background-color: #ffffff;
 }
 .visually-hidden {
   position: absolute;
@@ -34,10 +25,16 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.page {
+  outline: 1px solid #ff6347;
+}
+.page__body {
+  margin: 0;
+  background-color: #ffffff;
+}
 .page-title {
   margin: 0;
-  padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -52,7 +49,7 @@
   display: block;
   box-sizing: border-box;
   padding: 10px 0;
-  font-family: "oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -64,6 +61,12 @@
   background-color: #68b738;
   cursor: pointer;
 }
+.container {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  outline: 1px solid #ff6347;
+}
 .main-header {
   position: relative;
   display: flex;
@@ -73,7 +76,7 @@
   background-color: #ffffff;
 }
 .main-nav {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #000000;
   background-color: #ffffff;
 }
@@ -101,8 +104,8 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
   list-style: none;
+  background-color: #ffffff;
   text-transform: uppercase;
   z-index: 3;
 }
@@ -144,9 +147,7 @@
   padding: 26px 20px;
 }
 .contacts__intro {
-  padding: 0;
-  margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -154,11 +155,11 @@
   text-transform: uppercase;
 }
 .contacts__adress {
-  padding: 0;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  font-weight: 400;
   color: #444444;
 }
 .contacts__map-wrapper {
@@ -171,9 +172,9 @@
   left: 134px;
   width: 57px;
   height: 53px;
-  background-image: url("../../img/map-pin.svg");
+  background-image: url("../img/map-pin.svg");
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 1;
   content: "";
 }
 .contacts__map {
@@ -188,6 +189,11 @@
   left: 0;
   z-index: 0;
 }
+.contacts__map--active {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+}
 .main-footer {
   background-color: #f2f2f2;
 }
@@ -197,6 +203,7 @@
   flex-direction: column;
   align-items: center;
   gap: 19px;
+  background-color: #f2f2f2;
 }
 .main-footer__social {
   border-top: 1px solid #d9d9d9;
@@ -215,14 +222,15 @@
   align-items: center;
   width: 132px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   list-style: none;
+  margin: 0 auto;
 }
 .social__icon {
   display: block;
 }
 .academy {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -235,13 +243,13 @@
   text-decoration: none;
 }
 .promo {
-  background-image: url("../../img/promo-background.jpg");
   background-color: #ffffff;
-  background-repeat: no-repeat;
 }
 .promo__wrapper {
   position: relative;
   padding: 27px 20px 0;
+  background-image: url("../img/promo-background.jpg");
+  background-repeat: no-repeat;
 }
 .promo__wrapper::before {
   position: absolute;
@@ -265,7 +273,7 @@
   color: #ffffff;
 }
 .promo__slogan {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -301,7 +309,7 @@
 .programms__title {
   padding: 0;
   margin: 0 0 29px 70px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -311,7 +319,7 @@
 .programms__description {
   padding: 0;
   margin: 0 0 38px 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -323,7 +331,7 @@
   gap: 15px;
   padding: 4px 0;
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -339,7 +347,7 @@
 }
 .process__title {
   margin: 0 0 40px 0;
-  font-family: "oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
@@ -366,22 +374,23 @@
   background-position: 50% 50%;
 }
 .process__icon--leaf {
-  background-image: url("../../img/icon/leaf-icon.svg");
+  background-image: url("../img/icon/leaf-icon.svg");
 }
 .process__icon--powder {
-  background-image: url("../../img/icon/powder-icon.svg");
+  background-image: url("../img/icon/powder-icon.svg");
 }
 .process__icon--eat {
-  background-image: url("../../img/icon/eat-icon.svg");
+  background-image: url("../img/icon/eat-icon.svg");
 }
 .process__icon--clock {
-  background-image: url("../../img/icon/clock-icon.svg");
+  background-image: url("../img/icon/clock-icon.svg");
 }
 .process__description {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   color: #444444;
 }
 .example {
@@ -391,18 +400,16 @@
   padding: 25px 20px 40px;
 }
 .example__title {
-  padding: 0;
   margin: 0 0 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: #000000;
 }
 .example__intro {
-  padding: 0;
   margin: 0 0 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -412,7 +419,9 @@
   display: flex;
   gap: 32px;
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 20px;
 }
 .example__item {
   display: flex;
@@ -424,7 +433,7 @@
 }
 .example__number {
   margin-bottom: 7px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -434,7 +443,7 @@
 .example__description {
   margin: 0;
   padding: 0 2px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
@@ -444,7 +453,7 @@
 }
 .example__price {
   margin: 0 0 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -551,11 +560,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 17px;
-  font-family: "OSwald", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #222222;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
 }
 .product-card__image-wrapper {
@@ -570,6 +576,10 @@
   min-width: 90px;
   min-height: 107px;
   margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #222222;
 }
 .product-card__list {
   position: absolute;
@@ -577,6 +587,7 @@
   left: 140px;
   padding: 0;
   margin: 0;
+  list-style: none;
   min-width: 140px;
 }
 .product-card__button {
@@ -585,7 +596,7 @@
 .product-card__item {
   display: flex;
   justify-content: space-between;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -601,15 +612,16 @@
 .show-more-card__title {
   padding: 0;
   margin: 0;
-  font-family: "OSwald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #222222;
+  color: #111111;
+  text-transform: uppercase;
 }
 .show-more-card__description {
   margin: 8px 0 21px 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
@@ -627,9 +639,8 @@
   padding: 25px 20px 35px;
 }
 .additional-catalog__title {
-  padding: 0;
-  margin: 0 0 36px 0;
-  font-family: "Oswald", sans-serif;
+  margin: 0 0 36px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -637,8 +648,9 @@
 }
 .additional-catalog__list {
   padding: 0;
-  margin: 0 0 35px 0;
+  margin: 0;
   list-style: none;
+  margin-bottom: 35px;
 }
 .additional-catalog__item {
   position: relative;
@@ -680,7 +692,7 @@
   left: 101px;
   width: 78px;
   height: 80px;
-  background-image: url("../../../img/icon/gift-icon.svg");
+  background-image: url("../img/icon/gift-icon.svg");
   content: "";
 }
 .additional-catalog__gift-image {
@@ -691,7 +703,7 @@
   top: 187px;
   left: 58px;
   width: 161px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -703,20 +715,19 @@
   flex-direction: column;
 }
 .additional-product-card__title {
-  padding: 0;
-  margin: 0 0 13px 0;
-  font-family: "Oswald", sans-serif;
+  margin: 0 0 13px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  text-transform: uppercase;
   color: #222222;
 }
 .additional-product-card__feature {
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  margin: 0 0 15px 0;
-  font-family: "Lato", sans-serif;
+  margin: 0 0 15px;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -731,7 +742,7 @@
 .selection-form__description {
   padding: 0 50px 0 0;
   margin: 0 0 39px 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -753,7 +764,7 @@
 .sending-form__legend {
   padding: 0;
   margin-bottom: 35px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
@@ -765,7 +776,7 @@
   list-style: none;
 }
 .sending-form__item {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -824,7 +835,7 @@
   width: 1em;
   padding: 13px 15px 12px;
   border: 1px solid #e7e7e7;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -843,13 +854,14 @@
   width: 100%;
   min-height: 150px;
   padding: 14px;
+  resize: none;
 }
 .sending-form__button {
   margin: 10px 0 21px;
 }
 .sending-form__info {
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
