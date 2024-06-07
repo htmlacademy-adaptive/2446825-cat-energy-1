@@ -7,30 +7,24 @@
 }
 
 .example__title {
-  padding: 0;
   margin: 0 0 40px;
-  font-family: "Oswald", sans-serif;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(36px; 40px; 400);
   color: #000000;
 }
 
 .example__intro {
-  padding: 0;
   margin: 0 0 20px;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
+  font-family: @lato;
+  .font-sizes(14px; 18px; 400);
   color: #444444;
 }
 
 .example__list {
   display: flex;
   gap: 32px;
-  padding: 0;
-  margin: 0 0 20px;
+  .list-reset();
+  margin-bottom: 20px;
 }
 
 .example__item {
@@ -44,10 +38,8 @@
 
 .example__number {
   margin-bottom: 7px;
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(24px; 24px; 400);
   color: #000000;
   text-transform: uppercase;
 }
@@ -55,10 +47,8 @@
 .example__description {
   margin: 0;
   padding: 0 2px;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 400;
+  font-family: @lato;
+  .font-sizes(12px; 12px; 400);
   color: #444444;
   text-transform: lowercase;
   text-align: center;
@@ -66,10 +56,8 @@
 
 .example__price {
   margin: 0 0 20px;
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(14px; 20px; 400);
   color: #000000;
   text-align: center;
   text-transform: uppercase;

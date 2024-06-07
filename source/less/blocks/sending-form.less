@@ -16,24 +16,18 @@
 .sending-form__legend {
   padding: 0;
   margin-bottom: 35px;
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(24px; 26px; 400);
   color: #000000;
 }
 
 .sending-form__list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  .list-reset();;
 }
 
 .sending-form__item {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(16px; 18px; 400);
   color: #444444;
   text-transform: uppercase;
 }
@@ -97,10 +91,8 @@
   width: 1em;
   padding: 13px 15px 12px;
   border: 1px solid #e7e7e7;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(16px; 18px; 400);
   color: #444444;
   text-transform: uppercase;
 }
@@ -118,6 +110,7 @@
   width: 100%;
   min-height: 150px;
   padding: 14px;
+  resize: none;
 }
 
 .sending-form__button {
@@ -126,9 +119,7 @@
 
 .sending-form__info {
   text-align: center;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;
+  font-family: @lato;
+  .font-sizes(14px; 16px; 400);
   color: #000000;
 }

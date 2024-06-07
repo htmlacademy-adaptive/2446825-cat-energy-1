@@ -1,13 +1,12 @@
 .promo {
-  background-image: url("../../img/promo-background.jpg");
   background-color: #ffffff;
-  background-repeat: no-repeat;
 }
 
 .promo__wrapper {
   position: relative;
   padding: 27px 20px 0;
-  // background-color: #ffffff;
+  background-image: url("../img/promo-background.jpg");
+  background-repeat: no-repeat;
 }
 
 .promo__wrapper::before {
@@ -35,10 +34,8 @@
 }
 
 .promo__slogan {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(14px; 14px; 400);
   color: #ffffff;
   text-transform: uppercase;
 }

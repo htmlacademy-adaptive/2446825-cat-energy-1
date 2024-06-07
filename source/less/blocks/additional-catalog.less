@@ -7,19 +7,15 @@
 }
 
 .additional-catalog__title {
-  padding: 0;
-  margin: 0 0 36px 0;
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
+  margin: 0 0 36px;
+  font-family: @oswald;
+  .font-sizes(24px; 24px; 400);
   color: #000000;
 }
 
 .additional-catalog__list {
-  padding: 0;
-  margin: 0 0 35px 0;
-  list-style: none;
+  .list-reset();
+  margin-bottom: 35px;
 }
 
 .additional-catalog__item {
@@ -67,7 +63,7 @@
   left: 101px;
   width: 78px;
   height: 80px;
-  background-image: url("../../../img/icon/gift-icon.svg");
+  background-image: url("../img/icon/gift-icon.svg");
   content: "";
 }
 
@@ -80,10 +76,8 @@
   top: 187px;
   left: 58px;
   width: 161px;
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  font-family: @lato;
+  .font-sizes(16px; 20px; 400);
   color: #ffffff;
   text-align: center;
 }

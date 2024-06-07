@@ -13,22 +13,16 @@
 }
 
 .contacts__intro {
-  padding: 0;
-  margin: 0;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  font-family: @oswald;
+  .font-sizes(16px; 20px; 400);
   color: #111111;
   text-transform: uppercase;
 }
 
 .contacts__adress {
-  padding: 0;
   margin: 0;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+  font-family: @lato;
+  .font-sizes(14px; 20px; 400);
   color: #444444;
 }
 
@@ -43,9 +37,9 @@
   left: 134px;
   width: 57px;
   height: 53px;
-  background-image: url("../../img/map-pin.svg");
+  background-image: url("../img/map-pin.svg");
   background-repeat: no-repeat;
-  z-index: 2;
+  z-index: 1;
   content: "";
 }
 
@@ -61,4 +55,10 @@
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.contacts__map--active {
+  position: absolute;
+  left: 0;
+  width: 100vw;
 }
