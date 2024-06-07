@@ -1,0 +1,29 @@
+.main-catalog {
+  background-color: #ffffff;
+}
+
+.main-catalog__wrapper {
+  padding: 27px 20px 0;
+}
+
+.main-catalog__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .list-reset();
+}
+
+.main-catalog__item {
+  position: relative;
+  padding: 20px 0 25px;
+}
+
+.main-catalog__item::after {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  height: 1px;
+  background-color: #ebebeb;
+  content: "";
+}
