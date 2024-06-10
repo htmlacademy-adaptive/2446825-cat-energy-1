@@ -3,14 +3,30 @@
 }
 
 .process__wrapper {
-  padding: 0 20px 49px;
+  padding-top: 0;
+  padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
 }
 
 .process__title {
+  .font-sizes(36px; 40px; 400);
   margin: 0 0 40px 0;
   font-family: @oswald;
-  .font-sizes(36px; 40px; 400);
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(60px; 60px; 400);
+    margin-bottom: 32px;
+  }
 }
 
 .process__list {
@@ -18,20 +34,48 @@
   flex-direction: column;
   gap: 20px;
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 383px auto;
+    row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .process__item {
+  position: relative;
   display: flex;
   align-items: center;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    max-width: 249px;
+    height: 280px;
+    padding-top: 40px;
+  }
 }
 
 .process__icon {
   min-width: 60px;
   min-height: 60px;
   margin-right: 20px;
-  background-color: #68b738;
+  background-color: @basic-green;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @media (min-width: @tablet-width) {
+    min-width: 80px;
+    min-height: 80px;
+    margin-bottom: 31px;
+  }
 }
 
 .process__icon--leaf {
@@ -51,8 +95,28 @@
 }
 
 .process__description {
+  .font-sizes(14px; 18px; 400);
   margin: 0;
   font-family: @lato;
-  .font-sizes(14px; 18px; 400);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(16px; 24px; 400);
+    max-width: 245px;
+  }
+}
+
+.process__counter {
+  .font-sizes(280px; 280px; 400);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: @oswald;
+  color: #f2f2f2;
+  z-index: -1;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
