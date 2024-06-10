@@ -1,31 +1,109 @@
 .example {
+  position: relative;
+  // background-color: #eaeaea;
+}
+
+.example::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #eaeaea;
+  content: "";
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    top: auto;
+    bottom: 0;
+    height: 462px;
+  }
 }
 
 .example__wrapper {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
 }
 
 .example__title {
+  .font-sizes(36px; 40px; 400);
   margin: 0 0 40px;
   font-family: @oswald;
-  .font-sizes(36px; 40px; 400);
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(60px; 60px; 400);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__intro {
+  .font-sizes(14px; 18px; 400);
   margin: 0 0 20px;
   font-family: @lato;
-  .font-sizes(14px; 18px; 400);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(16px; 24px; 400);
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-bottom: 69px;
+  }
+}
+
+.example__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: start;
+    width: 370px;
+    margin-bottom: 0;
+  }
 }
 
 .example__list {
+  .list-reset();
   display: flex;
   gap: 32px;
-  .list-reset();
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    gap: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 366px;
+    margin-bottom: 55px;
+    gap: 42px;
+  }
 }
 
 .example__item {
@@ -34,47 +112,100 @@
   align-items: center;
   box-sizing: border-box;
   min-width: 124px;
-  padding: 13px 20px 0;
+  padding: 14px 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 16px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 }
 
 .example__number {
+  .font-sizes(24px; 24px; 400);
   margin-bottom: 7px;
   font-family: @oswald;
-  .font-sizes(24px; 24px; 400);
   color: #000000;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(30px; 37px; 400);
+    margin-bottom: 11px;
+  }
 }
 
 .example__description {
+  .font-sizes(12px; 12px; 400);
   margin: 0;
   padding: 0 2px;
   font-family: @lato;
-  .font-sizes(12px; 12px; 400);
   color: #444444;
   text-transform: lowercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(14px; 14px; 400);
+  }
 }
 
 .example__price {
+  .font-sizes(14px; 20px; 400);
+  display: flex;
+  gap: 3px;
   margin: 0 0 20px;
   font-family: @oswald;
-  .font-sizes(14px; 20px; 400);
   color: #000000;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(20px; 20px; 400);
+    flex-direction: column;
+    align-items: end;
+    gap: 9px;
+    width: 175px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    gap: 63px;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+  }
 }
 
 .example__image-wrapper {
   min-height: 256px;
   width: 100%;
   position: relative;
-  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    min-height: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 560px;
+  }
 }
 
 .example__image {
   width: 100%;
   height: 100%;
+  aspect-ratio: 280 / 256;
   position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    aspect-ratio: 560 / 512;
+  }
 }
 
 .example__image--before {
@@ -111,6 +242,10 @@
   border-top-right-radius: 2px;
   background-color: #666666;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    top: -237px;
+  }
 }
 
 .example__toggle::after {
@@ -123,6 +258,10 @@
   border-bottom-right-radius: 2px;
   background-color: #666666;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    bottom: -237px;
+  }
 }
 
 .example__toggle-svg {
