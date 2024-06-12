@@ -3,24 +3,65 @@
 }
 
 .additional-catalog__wrapper {
-  padding: 25px 20px 35px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 896px 245px;
+    justify-content: space-between;
+    padding-top: 76px;
+    padding-bottom: 87px;
+  }
 }
 
 .additional-catalog__title {
+  .font-sizes(24px; 24px; 400);
   margin: 0 0 36px;
   font-family: @oswald;
-  .font-sizes(24px; 24px; 400);
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(36px; 36px; 400);
+    padding-left: 40px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
 }
 
 .additional-catalog__list {
   .list-reset();
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .additional-catalog__item {
   position: relative;
   padding: 13px 0 19px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 1px 17px;
+  }
 }
 
 .additional-catalog__item::before {
@@ -64,20 +105,58 @@
   width: 78px;
   height: 80px;
   background-image: url("../img/icon/gift-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   content: "";
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+    width: 80px;
+    height: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 56px;
+    left: 83px;
+    height: 83px;
+  }
 }
 
 .additional-catalog__gift-image {
   display: block;
+  aspect-ratio: 280 / 290;
+
+  @media (min-width: @tablet-width) {
+    aspect-ratio: 708 / 200;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    aspect-ratio: 245 / 288;
+    width: 100%;
+  }
 }
 
 .additional-catalog__gift-text {
+  .font-sizes(16px; 20px; 400);
   position: absolute;
   top: 187px;
   left: 58px;
   width: 161px;
+  margin: 0;
   font-family: @lato;
-  .font-sizes(16px; 20px; 400);
   color: #ffffff;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    top: 71px;
+    left: auto;
+    right: 125px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 185px;
+    right: 42px;
+  }
 }
