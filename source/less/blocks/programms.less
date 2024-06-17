@@ -4,48 +4,125 @@
 }
 
 .programms__wrapper {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .programms__list {
+  .list-reset();
   display: flex;
   flex-direction: column;
   gap: 20px;
-  .list-reset();
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .programms__item {
-  box-sizing: border-box;
+  position: relative;
   padding: 30px 20px 18px;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 0 53px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 77px 61px 55px 52px;
+    width: 50%;
+  }
+}
+
+.programms__item::before {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @basic-green;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    top: 92px;
+    left: auto;
+    right: 63px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    left: 52px;
+    right: auto;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .programms__title {
+  .font-sizes(24px; 37px; 400);
   padding: 0;
   margin: 0 0 29px 70px;
   font-family: @oswald;
-  .font-sizes(24px; 37px; 400);
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(36px; 36px; 400);
+    margin: 0 0 24px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 73px 162px;
+  }
 }
 
 .programms__description {
+  .font-sizes(14px; 18px; 400);
   padding: 0;
   margin: 0 0 38px 0;
   font-family: @lato;
-  .font-sizes(14px; 18px; 400);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(16px; 24px; 400);
+    width: 340px;
+    margin-bottom: 48px;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-bottom: 23px;
+  }
 }
 
 .programms__link {
+  .font-sizes(16px; 16px; 400);
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 4px 0;
   margin: 0;
   font-family: @oswald;
-  .font-sizes(16px; 16px; 400);
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(20px; 30px; 400);
+    gap: 25px;
+  }
 }

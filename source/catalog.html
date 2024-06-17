@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи-каталог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
@@ -38,8 +39,8 @@
     </header>
     <main class="main-container">
       <section class="main-catalog container">
-        <h1 class="page-title page-title--catalog">Каталог продукции</h1>
         <div class="main-catalog__wrapper">
+          <h1 class="page-title page-title--catalog">Каталог продукции</h1>
           <h2 class="visually-hidden">Основные товары.</h2>
           <ul class="main-catalog__list">
             <li class="main-catalog__item product-card">
@@ -267,11 +268,11 @@
             <h2 class="visually-hidden">Контакты.</h2>
             <b class="contacts__intro">Приглашаем к сотрудничеству дилеров!</b>
             <p class="contacts__adress">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+              <span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span>
             </p>
           </div>
-          <div class="contacts__map contacts__map--active" id="map"></div>
-          <div class="contacts__map-wrapper">
+          <div class="contacts__map-wrapper contacts__map-wrapper--active" id="map"></div>
+          <div class="contacts__map-wrapper contacts__map-wrapper--static">
             <img class="contacts__map contacts__map--static" src="img/map-mobile.jpg" width="320" height="362" alt="Адресс на карте города.">
           </div>
         </div>

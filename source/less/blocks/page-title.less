@@ -2,12 +2,28 @@
   margin: 0;
   font-family: @oswald;
   .font-sizes(36px; 36px; 400);
+
+  @media (min-width: @tablet-width) {
+    .font-sizes(60px; 60px; 400);
+  }
 }
 
 .page-title--catalog {
-  padding: 27px 0 0 20px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .page-title--form {
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+  }
 }
