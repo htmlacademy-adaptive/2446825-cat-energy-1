@@ -41,11 +41,13 @@
     <main class="main-container">
       <h1 class="visually-hidden">Форма подбора программы.</h1>
       <section class="selection-form">
-        <div class="selection-form__wrapper container">
-          <h2 class="page-title page-title--form">Подбор программы</h2>
-          <p class="selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-          <div class="sending-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="sending-form__fieldset-wrapper">
+        <div class="selection-form__wrapper">
+          <div class="container-form">
+            <h2 class="page-title page-title--form">Подбор программы</h2>
+            <p class="selection-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          </div>
+          <form class="sending-form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="sending-form__fieldset-container container-form">
               <fieldset class="sending-form__fieldset">
                 <legend class="visually-hidden">Данные о коте.</legend>
                 <ul class="sending-form__list sending-form__list--cat-data">
@@ -105,32 +107,38 @@
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="sending-form__fieldset">
-              <legend class="sending-form__legend">Контактные данные (владельца кота)</legend>
-              <ul class="sending-form__list sending-form__list--owner-data">
-                <li class="sending-form__item">
-                  <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text" for="owner-email">E-mail:*</label>
-                      <input class="sending-form__control sending-form__control--text" id="owner-email" type="email" name="owner-email"
-                        value="kuklachev@gmail.com" required>
-                  </div>
-                </li>
-                <li class="sending-form__item">
-                  <div class="sending-form__field">
-                    <label class="sending-form__label sending-form__label--text" for="owner-tel">Телефон:*</label>
+            <div class="sending-form__fieldset-wrapper">
+              <fieldset class="sending-form__fieldset container-form">
+                <legend class="sending-form__legend">Контактные данные (владельца кота)</legend>
+                <ul class="sending-form__list sending-form__list--owner-data">
+                  <li class="sending-form__item">
+                    <div class="sending-form__field">
+                      <label class="sending-form__label sending-form__label--text" for="owner-email">E-mail:*</label>
+                      <input class="sending-form__control sending-form__control--text" id="owner-email" type="email"
+                        name="owner-email" value="kuklachev@gmail.com" required>
+                    </div>
+                  </li>
+                  <li class="sending-form__item">
+                    <div class="sending-form__field">
+                      <label class="sending-form__label sending-form__label--text" for="owner-tel">Телефон:*</label>
                       <input class="sending-form__control sending-form__control--text" id="owner-tel" type="tel" name="owner-tel"
                         value="8 (960) 900-60-90" required>
-                  </div>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="sending-form__fieldset">
-              <legend class="sending-form__legend">Комментарий</legend>
-              <label class="visually-hidden" for="comment">Расскажите обо всех повадках кота.</label>
-                <textarea class="sending-form__control sending-form__control--textarea" id="comment" name="sending-form-comment">Расскажите обо всех повадках кота</textarea>
-            </fieldset>
-            <fieldset class="sending-form__fieldset">
-              <legend class="sending-form__legend">Дополнительно</legend>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="sending-form__fieldset-wrapper">
+              <fieldset class="sending-form__fieldset container-form">
+                <legend class="sending-form__legend">Комментарий</legend>
+                <label class="visually-hidden" for="comment">Расскажите обо всех повадках кота.</label>
+                <textarea class="sending-form__control sending-form__control--textarea" id="comment"
+                  name="sending-form-comment">Расскажите обо всех повадках кота</textarea>
+              </fieldset>
+            </div>
+            <div class="sending-form__fieldset-wrapper">
+              <fieldset class="sending-form__fieldset container-form">
+                <legend class="sending-form__legend">Дополнительно</legend>
                 <ul class="sending-form__list sending-form__list--checkbox">
                   <li class="sending-form__item">
                     <div class="sending-form__checkbox">
@@ -169,8 +177,9 @@
                     </div>
                   </li>
                 </ul>
-            </fieldset>
-            <div class="sending-form__button-wrapper">
+              </fieldset>
+            </div>
+            <div class="sending-form__button-wrapper container-form">
               <button class="button sending-form__button" type="submit">Отправить заявку</button>
               <span class="sending-form__info">* — Обязательные поля</span>
             </div>
