@@ -1,6 +1,5 @@
 .example {
   position: relative;
-  // background-color: #eaeaea;
 }
 
 .example::before {
@@ -107,15 +106,17 @@
 }
 
 .example__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   min-width: 124px;
-  padding: 14px 20px 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 16px 0;
+    min-width: 162px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -129,24 +130,43 @@
   font-family: @oswald;
   color: #000000;
   text-transform: uppercase;
+  width: 100%;
+  padding: 13px 20px 16px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     .font-sizes(30px; 37px; 400);
-    margin-bottom: 11px;
+    padding: 14px 29px 19px;
+    margin-bottom: 5px;
   }
 }
 
 .example__description {
   .font-sizes(12px; 12px; 400);
+  position: absolute;
+  top: 47px;
+  max-width: 87px;
   margin: 0;
-  padding: 0 2px;
+  padding: 0 15px;
   font-family: @lato;
   color: #444444;
+  background-color: #eaeaea;
   text-transform: lowercase;
   text-align: center;
+  z-index: 3;
 
   @media (min-width: @tablet-width) {
     .font-sizes(14px; 14px; 400);
+    top: 62px;
+    max-width: 143px;
+    padding: 0 9px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #eaeaea;
   }
 }
 
@@ -168,7 +188,7 @@
     margin: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     flex-direction: row;
     gap: 63px;
     justify-content: start;
@@ -230,6 +250,29 @@
   margin-top: -20px;
   color: #666666;
   cursor: pointer;
+
+  &:hover,
+  &:hover path {
+    border-color: @basic-green;
+    fill: @basic-green;
+  }
+
+  &:hover&::before,
+  &:hover&::after {
+    background-color: @basic-green;
+  }
+
+  &:active,
+  &:active path {
+    border-color: @secondary-green;
+    fill: @secondary-green;
+    opacity: 0.6;
+  }
+
+  &:active&::before,
+  &:active&::after {
+    background-color: @secondary-green;
+  }
 }
 
 .example__toggle::before {

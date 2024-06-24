@@ -41,6 +41,7 @@
 
 .contacts__intro {
   .font-sizes(16px; 20px; 400);
+  max-width: 165px;
   font-family: @oswald;
   color: #111111;
   text-transform: uppercase;
@@ -53,15 +54,16 @@
 
 .contacts__adress {
   .font-sizes(14px; 20px; 400);
+  justify-self: end;
   display: flex;
   flex-direction: column;
+  max-width: 165px;
   margin: 0;
   font-family: @lato;
   color: #444444;
 
   @media (min-width: @tablet-width) {
     .font-sizes(16px; 20px; 400);
-    justify-self: end;
     text-align: end;
     gap: 19px;
     width: 160px;
@@ -70,6 +72,7 @@
 
 .contacts__map-wrapper {
   position: absolute;
+  bottom: 0;
   height: 362px;
   background-color: #f2f2f2;
 
