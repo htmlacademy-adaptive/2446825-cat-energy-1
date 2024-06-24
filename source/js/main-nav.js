@@ -1,7 +1,8 @@
 let button = document.querySelector('.main-nav__toggle');
-let menu = document.querySelector('.main-nav__list');
+let menu = document.querySelector('.main-nav');
+
+menu.classList.remove('main-nav--nojs');
 
 button.onclick = function() {
-  menu.classList.toggle('main-nav__list--is-close');
-  button.classList.toggle('main-nav__toggle--close');
+  menu.classList.toggle('main-nav--is-close');
 }
