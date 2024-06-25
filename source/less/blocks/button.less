@@ -9,6 +9,15 @@
   text-decoration: none;
   color: #ffffff;
   border: none;
-  background-color: #68b738;
+  background-color: @basic-green;
   cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: @secondary-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

@@ -65,6 +65,40 @@
   }
 }
 
+.process__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 60px;
+  min-height: 60px;
+  background-color: @basic-green;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    top: 40px;
+    min-width: 80px;
+    min-height: 80px;
+  }
+}
+
+.process__item--leaf::before {
+  background-image: url("../img/icon/leaf-icon.svg");
+}
+
+.process__item--powder::before {
+  background-image: url("../img/icon/powder-icon.svg");
+}
+
+.process__item--eat::before {
+  background-image: url("../img/icon/eat-icon.svg");
+}
+
+.process__item--clock::before {
+  background-image: url("../img/icon/clock-icon.svg");
+}
+
 .process__item::after {
   .font-sizes(280px; 280px; 400);
   position: absolute;
@@ -80,45 +114,60 @@
   }
 }
 
-.process__icon {
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 20px;
-  background-color: @basic-green;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-
+.process__item--leaf::after {
   @media (min-width: @tablet-width) {
-    min-width: 80px;
-    min-height: 80px;
-    margin-bottom: 31px;
+    right: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 20px;
   }
 }
 
-.process__icon--leaf {
-  background-image: url("../img/icon/leaf-icon.svg");
+.process__item--powder::after {
+  @media (min-width: @tablet-width) {
+    right: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 0;
+  }
 }
 
-.process__icon--powder {
-  background-image: url("../img/icon/powder-icon.svg");
+.process__item--eat::after {
+  @media (min-width: @tablet-width) {
+    right: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -3px;
+  }
 }
 
-.process__icon--eat {
-  background-image: url("../img/icon/eat-icon.svg");
-}
-
-.process__icon--clock {
-  background-image: url("../img/icon/clock-icon.svg");
+.process__item--clock::after {
+  @media (min-width: @desktop-width) {
+    right: -5px;
+  }
 }
 
 .process__description {
   .font-sizes(14px; 18px; 400);
+  padding: 2px 0 4px;
   margin: 0;
+  margin-left: 80px;
   font-family: @lato;
   color: #444444;
 
   @media (min-width: @tablet-width) {
     .font-sizes(16px; 24px; 400);
     max-width: 245px;
+    padding: 0;
+    margin: 111px 0 0 0;
+  }
+
+  & br {
+    @media (max-width: @mobile-only) {
+      display: none;
+    }
   }
 }

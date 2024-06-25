@@ -1,6 +1,5 @@
 .main-header {
   position: relative;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 13px;
@@ -9,6 +8,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     padding-top: 25px;
     padding-bottom: 0;
     border: none;
@@ -21,6 +21,14 @@
 
 .main-header__logo {
   justify-content: space-between;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     width: 175px;

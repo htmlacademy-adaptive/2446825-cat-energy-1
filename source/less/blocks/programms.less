@@ -34,6 +34,54 @@
   padding: 30px 20px 18px;
   background-color: #f2f2f2;
 
+  &--slim::after {
+    top: 21px;
+    left: 27px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/slim-cat.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 81px;
+      left: auto;
+      right: 93px;
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 41px;
+      left: 67px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/pro-cat.svg");
+
+    @media (min-width: @tablet-width) {
+      top: 135px;
+      left: auto;
+      right: 29px;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 67px;
+      left: 33px;
+      right: auto;
+      width: 134px;
+      height: 56px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 77px 0 53px 52px;
   }
@@ -69,6 +117,13 @@
     width: 100px;
     height: 100px;
   }
+}
+
+.programms__item::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
 }
 
 .programms__title {
@@ -111,9 +166,7 @@
 
 .programms__link {
   .font-sizes(16px; 16px; 400);
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  position: relative;
   padding: 4px 0;
   margin: 0;
   font-family: @oswald;
@@ -121,8 +174,35 @@
   text-decoration: none;
   color: #000000;
 
+  &:hover.programms__link::after {
+    background-image: url("../img/icon/large-arrow-icon.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     .font-sizes(20px; 30px; 400);
-    gap: 25px;
+  }
+}
+
+.programms__link::after {
+  position: absolute;
+  right: -47px;
+  top: 7px;
+  width: 47px;
+  height: 24px;
+  background-image: url("../img/icon/arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: -57px;
+    width: 57px;
+    height: 38px;
+    background-position: 25px center;
   }
 }

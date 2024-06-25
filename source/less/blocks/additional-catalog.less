@@ -101,7 +101,8 @@
 .additional-catalog__gift::after {
   position: absolute;
   top: 58px;
-  left: 101px;
+  left: 50%;
+  margin-left: -39px;
   width: 78px;
   height: 80px;
   background-image: url("../img/icon/gift-icon.svg");
@@ -114,6 +115,7 @@
     left: 77px;
     width: 80px;
     height: 82px;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -126,6 +128,7 @@
 .additional-catalog__gift-image {
   display: block;
   aspect-ratio: 280 / 290;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     aspect-ratio: 708 / 200;
@@ -142,9 +145,10 @@
   .font-sizes(16px; 20px; 400);
   position: absolute;
   top: 187px;
-  left: 58px;
+  left: 50%;
   width: 161px;
   margin: 0;
+  margin-left: -80px;
   font-family: @lato;
   color: #ffffff;
   text-align: center;
@@ -153,6 +157,7 @@
     top: 71px;
     left: auto;
     right: 125px;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
