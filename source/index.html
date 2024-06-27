@@ -5,12 +5,23 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicons/16.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple152.png">
   </head>
   <body class="page__body">
     <header class="main-header container">
       <a class="main-header__logo logo">
-        <img class="logo__image" src="img/cat-logo.svg" width="33" height="38" alt="Логотип магазина.">
-        <img class="logo__text" src="img/cat-title.svg" width="101" height="18" alt="Магазин CAT ENERGY.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/cat-logo-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/cat-logo-tablet.svg" width="60" height="50">
+          <img class="logo__image" src="img/cat-logo-mobile.svg" width="33" height="38" alt="Логотип магазина.">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/cat-title-desktop.svg" width="118" height="21">
+          <img class="logo__text" src="img/cat-title.svg" width="101" height="18" alt="Магазин CAT ENERGY.">
+        </picture>
       </a>
       <nav class="main-nav main-nav--is-close main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -45,7 +56,12 @@
             <h2 class="promo__title page-title">Функциональное питание для котов</h2>
             <span class="promo__slogan">Занялся собой? Займись котом!</span>
           </header>
-          <img class="promo__image" src="img/promo-supply.png" width="280" height="270" alt="Питание для котов с курицей.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index/promo-supply-desktop.png 1x, img/index/promo-supply-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index/promo-supply-tablet.png 1x, img/index/promo-supply-tablet@2x.png 2x">
+            <img class="promo__image" src="img/index/promo-supply-mobile.png" width="280" height="270"
+              srcset="img/index/promo-supply-mobile@2x.png 2x" alt="Питание для котов с курицей.">
+          </picture>
           <a class="promo__button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -127,10 +143,15 @@
             </p>
           </div>
           <div class="example__image-wrapper">
-            <img class="example__image example__image--before" src="img/example-before.png" width="280" height="256"
-              alt="Фото кота до курса.">
-            <img class="example__image example__image--after" src="img/example-after.png" width="280" height="256"
-              alt="Фото кота после курса.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/example-before-tablet.png 1x, img/index/example-before-tablet@2x.png 2x">
+              <img class="example__image example__image--before" src="img/index/example-before-mobile.png" width="280" height="256"
+                srcset="img/index/example-before-mobile@2x.png 2x" alt="Фото кота до курса.">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/index/example-after-tablet.png 1x, img/index/example-after-tablet@2x.png 2x">
+              <img class="example__image example__image--after" src="img/index/example-after-mobile.png" width="280" height="256" srcset="img/index/example-after-mobile@2x.png 2x" alt="Фото кота после курса.">
+            </picture>
             <button class="example__toggle" type="button">
               <svg class="example__toggle-svg" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z" />
@@ -150,7 +171,12 @@
           </div>
           <div class="contacts__map-wrapper contacts__map-wrapper--active" id="map"></div>
           <div class="contacts__map-wrapper contacts__map-wrapper--static">
-            <img class="contacts__map contacts__map--static" src="img/map-mobile.jpg" width="320" height="362" alt="Адресс на карте города.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x">
+              <img class="contacts__map contacts__map--static" src="img/map/map-mobile.jpg" width="320" height="362" srcset="img/map/map-mobile@2x.png 2x"
+                alt="Адресс на карте города.">
+            </picture>
           </div>
         </div>
       </section>

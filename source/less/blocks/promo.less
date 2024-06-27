@@ -61,21 +61,29 @@
   height: 302px;
   content: "";
   z-index: 1;
-  background-image: url("../img/promo-background.jpg");
+  background-image: url("../img/index/promo-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/promo-background-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/promo-background.jpg");
+    background-image: url("../img/index/promo-background-desktop.png");
     top: -114px;
     left: 50%;
     right: 0;
     width: 50%;
     height: 694px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/promo-background-desktop@2x.png");
+    }
   }
 }
 
@@ -118,7 +126,7 @@
   position: relative;
   top: 0;
   left: 50%;
-  margin-left: -140px;
+  transform: translateX(-50%);
   display: block;
   margin-bottom: 3px;
   z-index: 2;
@@ -128,8 +136,7 @@
     top: 266px;
     left: 30px;
     width: 708px;
-    height: auto;
-    margin-left: 0;
+    transform: none;
     aspect-ratio: 708 / 609;
     z-index: 1;
   }
