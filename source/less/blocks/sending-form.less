@@ -179,6 +179,7 @@
 }
 
 .sending-form__field {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -280,9 +281,17 @@
     outline-offset: -2px;
   }
 
+  &:focus + svg {
+    stroke: @basic-green;
+  }
+
   &--error {
     outline: 2px solid #ff8282;
     outline-offset: -2px;
+  }
+
+  &--error + svg {
+    stroke: #ff8282;
   }
 
   @media (min-width: @tablet-width) {
@@ -290,11 +299,30 @@
   }
 }
 
+.sending-form__control-icon {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  fill: none;
+  stroke: #000000;
+
+  @media (min-width: @tablet-width) {
+    top: 16px;
+    right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 16px;
+  }
+}
+
 .sending-form__control--text {
   flex-grow: 1;
 
+  padding-right: 40px;
+
   @media (min-width: @tablet-width) {
-    padding: 10px 19px;
+    padding: 10px 40px 10px 19px;
   }
 }
 
