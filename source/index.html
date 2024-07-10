@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
     <link rel="icon" href="img/favicons/16.svg" type="image/svg+xml">
@@ -148,11 +148,17 @@
           </div>
           <div class="example__image-wrapper">
             <picture>
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/index/example-before-tablet.webp 1x, img/index/example-before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/example-before-mobile.webp 1x, img/index/example-before-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/index/example-before-tablet.png 1x, img/index/example-before-tablet@2x.png 2x">
               <img class="example__image example__image--before" src="img/index/example-before-mobile.png" width="280" height="256"
                 srcset="img/index/example-before-mobile@2x.png 2x" alt="Фото кота до курса.">
             </picture>
             <picture>
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/index/example-after-tablet.webp 1x, img/index/example-after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index/example-after-mobile.webp 1x, img/index/example-after-mobile@2x.webp 2x">
+
               <source media="(min-width: 768px)" srcset="img/index/example-after-tablet.png 1x, img/index/example-after-tablet@2x.png 2x">
               <img class="example__image example__image--after" src="img/index/example-after-mobile.png" width="280" height="256" srcset="img/index/example-after-mobile@2x.png 2x" alt="Фото кота после курса.">
             </picture>
