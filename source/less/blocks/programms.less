@@ -25,6 +25,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 80px;
   }
 }
@@ -90,7 +91,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 77px 61px 55px 52px;
-    width: 50%;
+    width: 570px;
   }
 }
 
@@ -138,10 +139,12 @@
 
   @media (min-width: @tablet-width) {
     .font-sizes(36px; 36px; 400);
+    padding-right: 290px;
     margin: 0 0 24px 0;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
     margin: 0 0 73px 162px;
   }
 }
@@ -169,6 +172,8 @@
 .programms__link {
   .font-sizes(16px; 16px; 400);
   position: relative;
+  display: inline-block;
+  max-width: 200px;
   padding: 4px 0;
   margin: 0;
   font-family: @oswald;
@@ -186,13 +191,15 @@
 
   @media (min-width: @tablet-width) {
     .font-sizes(20px; 30px; 400);
+    max-width: 80%;
   }
 }
 
 .programms__link::after {
   position: absolute;
   right: -47px;
-  top: 7px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 47px;
   height: 24px;
   background-image: url("../img/icon/arrow-icon.svg");
@@ -201,7 +208,6 @@
   content: "";
 
   @media (min-width: @tablet-width) {
-    top: 0;
     right: -57px;
     width: 57px;
     height: 38px;

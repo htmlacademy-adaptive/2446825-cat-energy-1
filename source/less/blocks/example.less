@@ -90,6 +90,7 @@
 .example__list {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   margin-bottom: 20px;
 
@@ -120,7 +121,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
+    width: 162px;
   }
 }
 
@@ -184,7 +185,7 @@
     flex-direction: column;
     align-items: end;
     gap: 9px;
-    width: 175px;
+    min-width: 175px;
     margin: 0;
   }
 
@@ -218,6 +219,7 @@
 .example__image {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   aspect-ratio: 280 / 256;
   position: absolute;
   top: 0;

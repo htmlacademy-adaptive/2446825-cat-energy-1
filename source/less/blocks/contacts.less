@@ -88,18 +88,20 @@
 }
 
 .contacts__map-wrapper--static {
+  position: relative;
   left: 50%;
-  margin-left: -160px;
+  transform: translateX(-50%);
+  min-width: 320px;
   display: block;
   z-index: 0;
 
-  @media (min-width: @tablet-width) {
-    margin-left: -384px;
-  }
+  // @media (min-width: @tablet-width) {
+  //   margin-left: -384px;
+  // }
 
-  @media (min-width: @desktop-width) {
-    margin-left: -720px;
-  }
+  // @media (min-width: @desktop-width) {
+  //   margin-left: -720px;
+  // }
 }
 
 .contacts__map-wrapper--static::before {
