@@ -11,9 +11,9 @@
 .promo::after {
   position: absolute;
   top: -1px;
+  bottom: 178px;
   left: 0;
   width: 100%;
-  height: 302px;
   content: "";
   background-color: rgba(104, 183, 56, 0.85);
   z-index: 1;
@@ -57,9 +57,9 @@
 .promo__wrapper::before {
   position: absolute;
   top: 0;
+  bottom: 178px;
   left: 0;
   width: 100%;
-  height: 302px;
   content: "";
   z-index: 1;
   background-image: url("../img/index/promo-background-mobile.jpg");
@@ -77,10 +77,11 @@
   @media (min-width: @desktop-width) {
     background-image: url("../img/index/promo-background-desktop.png");
     top: -114px;
+    bottom: 82px;
     left: 50%;
     right: 0;
     width: 50%;
-    height: 694px;
+    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/promo-background-desktop@2x.png");
@@ -91,7 +92,6 @@
 .promo__header {
   position: relative;
   text-align: center;
-  max-height: 260px;
   margin-bottom: 29px;
   z-index: 2;
 
