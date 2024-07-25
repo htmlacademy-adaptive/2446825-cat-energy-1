@@ -66,6 +66,12 @@
     width: 436px;
     margin-bottom: 69px;
   }
+
+  & br {
+    @media (max-width: 1439px) {
+      display: none;
+    }
+  }
 }
 
 .example__text-wrapper {
@@ -92,7 +98,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -187,7 +193,7 @@
     align-items: end;
     gap: 9px;
     min-width: 175px;
-    margin: 0;
+    margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -196,6 +202,7 @@
     justify-content: start;
     align-items: center;
     width: auto;
+    margin: 0;
   }
 }
 
