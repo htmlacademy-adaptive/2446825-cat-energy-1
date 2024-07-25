@@ -16,7 +16,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: end;
-      gap: 33px;
+      gap: 34px;
     }
   }
 
@@ -38,18 +38,18 @@
     @media (min-width: @tablet-width) {
       display: flex;
       justify-content: end;
-      gap: 33px;
+      gap: 34px;
     }
   }
 
   .main-nav__toggle {
-    background-image: url("../img/icon/menu-close-icon.svg");
+    display: none;
   }
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 23px;
+  top: 20px;
   right: 20px;
   display: block;
   box-sizing: border-box;
@@ -81,13 +81,15 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: -1px;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
-    gap: 33px;
+    gap: 34px;
   }
 
   @media (min-width: @desktop-width) {
+    left: -2px;
     max-width: 600px;
     justify-content: end;
     background-color: inherit;
@@ -122,7 +124,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     right: 0;
-    bottom: 2px;
+    bottom: 4px;
     left: 0;
     height: 2px;
     background-color: #68b738;
