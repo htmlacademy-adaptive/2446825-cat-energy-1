@@ -154,8 +154,10 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 344px auto;
-    gap: 32px 0;
+    grid-template-columns: 284px 284px;
+    gap: unset;
+    justify-content: space-between;
+    align-items: end;
     padding-top: 57px;
     padding-bottom: 52px;
   }
@@ -231,6 +233,16 @@
     padding-top: 5px;
     padding-left: 60px;
     padding-bottom: 5px;
+  }
+}
+
+.sending-form__item:nth-child(odd):not(:first-child) .sending-form__checkbox {
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 
@@ -345,6 +357,11 @@
 .sending-form__control--checkbox:disabled + .sending-form__checkbox-mark,
 .sending-form__control--checkbox:disabled ~ .sending-form__checkbox-name {
   opacity: 0.3;
+}
+
+.sending-form__control--radio:focus + .sending-form__radio-mark,
+.sending-form__control--checkbox:focus + .sending-form__checkbox-mark {
+  outline: 2px solid #000000;
 }
 
 .sending-form__control--radio:checked + .sending-form__radio-mark::after {
